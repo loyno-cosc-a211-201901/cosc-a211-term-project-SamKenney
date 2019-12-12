@@ -2,10 +2,9 @@
 #include <windows.h>
 using namespace std;
  
-const int NUMBER_OF_NOTES = 117; 
-const int NUMBER_OF_TIMES = 117;
-const int NUMBER_OF_SLEEP = 117;
-const int NOTE_E5 = 659;
+const int NUMBER_OF_NOTES = 117; //Number of Total Notes in Song
+const int NUMBER_OF_TIMES = 117; 
+const int NOTE_E5 = 659; //Note and Respective Frequency
 const int NOTE_FS5 = 740;
 const int NOTE_CS4 = 277;
 const int NOTE_A5 = 880;
@@ -14,16 +13,16 @@ const int NOTE_D4 = 294;
 const int NOTE_E4 = 330;
 const int NOTE_B4 = 494;
 const int NOTE_B5 = 988;
-const int Q_NOTE = 400;
-const int SOMETHING_NOTE = 1000;
-const int Half_NOTE = 1600;
-const int Whole_NOTE = 3200;
+const int Q_NOTE = 400; //Quarter Note
+const int S_NOTE = 1000;
+const int H_NOTE = 1600; // Half Note
+const int W_NOTE = 3200; // Whole Note
 
 
  
  
  
-void playSong (int freqArray [], int timeArray[],  int NUMBER_OF_NOTES);
+void playSong (int freqArray [], int timeArray[],  int NUMBER_OF_NOTES); //Function that plays the song
 
 //void rest (int timeArray[]);
 
@@ -37,7 +36,7 @@ int main(){
 
 
  
-    playSong (freqArray, timeArray, NUMBER_OF_NOTES);
+    playSong (freqArray, timeArray, NUMBER_OF_NOTES); // Function Call
     
     //rest (timeArray);
 
@@ -56,8 +55,8 @@ void playSong (int freqArray [], int timeArray[],  int NUMBER_OF_NOTES){
     for (play = 0; play < NUMBER_OF_NOTES; play++) {    
         cout << freqArray[play] << endl;
         cout << "The play counter is now: " << play << endl;
-        Beep (freqArray[play], timeArray[play]); 
-        Sleep(timeArray[play]); 
+        Beep (freqArray[play], timeArray[play]); //Beep Function
+        Sleep(timeArray[play]); //Sleep Function
     }
 
     cout << freqArray[play] << endl;
